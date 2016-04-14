@@ -9,7 +9,7 @@ Template for writing Selenium bots in C# with many basic necessities prepared. I
 2. My Selenium helper functions included
       * Includes many functions for easy element selection and element waiting
       * Functions include error handling - error in message box + sound, so bot user will understand whats the problem.
-      * Fuctions to start as Firefox, Chrome.
+      * Functions to start as Firefox, Chrome.
 3. Multithreaded 
      * Bot actions moved another thread, different from UI.
 
