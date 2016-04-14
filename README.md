@@ -9,7 +9,7 @@ Template for writing Selenium bots with many basic necessities prepared.
       * Functions include error handling - error in message box + sound, so bot user will understand whats the problem.
       * Fuctions to start as Firefox, Chrome.
 3. Multithreaded 
-     * Bot actions moved to its own thread, different from UI.
+     * Bot actions moved another thread, different from UI.
 
 ## Installation 
   1. Open the project in VS
