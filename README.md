@@ -21,5 +21,6 @@ Template for writing Selenium bots in C# with many basic necessities prepared. I
   3. When creating new project this will appear as template with the name you gave it.
   4. Open the nuget manager, nugget will ask to install your missing packages.
 
-### Support
+
+   Support
 <a href='https://pledgie.com/campaigns/31469'><img alt='Click here to lend your support to: Selenium C# Utilities and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31469.png?skin_name=chrome' border='0' ></a>
