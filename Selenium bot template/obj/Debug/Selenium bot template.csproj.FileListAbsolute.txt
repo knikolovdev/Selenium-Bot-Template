@@ -1,0 +1,21 @@
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\Selenium bot template.exe.config
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\Selenium bot template.exe
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\Selenium bot template.pdb
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\WebDriver.dll
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\WebDriver.Support.dll
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\WebDriver.xml
+D:\Projects\Selenium bot template\Selenium bot template\bin\Debug\WebDriver.Support.xml
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template.csprojResolveAssemblyReference.cache
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\MainWindow.g.cs
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\App.g.cs
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template_MarkupCompile.cache
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template_MarkupCompile.lref
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\MainWindow.baml
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template.g.resources
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium_bot_template.Properties.Resources.resources
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template.csproj.GenerateResource.Cache
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template.exe
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot template.pdb
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\App.baml
+D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Themes\Styles.baml
