@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Selenium_bot_template"
         mc:Ignorable="d"
-        Title="Bot" Height="350" Width="525"
+        Title="Bot" Height="349" Width="525"
         Style ="{StaticResource {x:Type Window}}">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/darkepic.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="0*" />
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="25"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" MinHeight="19"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <Menu>
@@ -29,6 +29,9 @@
                 <MenuItem x:Name="HelpBtn" Header="Help" IsEnabled="True" HorizontalAlignment="Right"/>
             </Menu>
         </StackPanel>
-        <Button x:Name="StatButton" Content="Start" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Width="75" Click="StatButton_Click"/>
+        <Button x:Name="StatButton" Content="Start" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="StatButton_Click" Height="19" Grid.Row="1"/>
+        <StatusBar Grid.Row="2" Grid.Column="0" Height="Auto" Opacity="0.3" Margin="1,0,0,0">
+            <StatusBarItem>Ready</StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
