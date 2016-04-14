@@ -1,5 +1,5 @@
 # Selenium-Bot-Template
-Template for writing Selenium bots with many basic necessities prepared.
+Template for writing Selenium bots in C# with many basic necessities prepared.
 
 ## Features
 1. Styled WPF User Interface ( dark themed )
