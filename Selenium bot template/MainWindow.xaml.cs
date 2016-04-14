@@ -34,5 +34,10 @@ namespace Selenium_bot_template
             botThread = new Thread(bot.BotActions);
             botThread.Start();
         }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

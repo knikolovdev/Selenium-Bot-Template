@@ -11,6 +11,24 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Images/darkepic.jpg"/>
         </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Menu>
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <DockPanel HorizontalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem Header="File">
+                    <MenuItem x:Name="ExitBtn" Header="Exit" Click="ExitBtn_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="HelpBtn" Header="Help" IsEnabled="True" HorizontalAlignment="Right"/>
+            </Menu>
+        </StackPanel>
         <Button x:Name="StatButton" Content="Start" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Width="75" Click="StatButton_Click"/>
     </Grid>
 </Window>

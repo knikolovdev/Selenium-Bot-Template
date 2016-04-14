@@ -19,3 +19,24 @@ D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Selenium bot t
 D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\App.baml
 D:\Projects\Selenium bot template\Selenium bot template\obj\Debug\Themes\Styles.baml
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.exe.config
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.exe
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.pdb
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.exe
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.pdb
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.dll
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.Support.dll
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.xml
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.Support.xml
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csprojResolveAssemblyReference.cache
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\MainWindow.g.cs
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\App.g.cs
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template_MarkupCompile.cache
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template_MarkupCompile.lref
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\App.baml
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\MainWindow.baml
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Themes\Styles.baml
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.g.resources
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium_bot_template.Properties.Resources.resources
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csproj.GenerateResource.Cache
