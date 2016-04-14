@@ -11,7 +11,7 @@ Template for writing Selenium bots with many basic necessities prepared.
 3. Multithreaded 
      * Bot actions moved to its own thread, different from UI.
 
-## Instalation 
+## Installation 
   1. Open the project in VS
   2. Click 'File' > 'Export Template...' > 'Project template'
   3. When creating new project this will appear as template with the name you gave it.
