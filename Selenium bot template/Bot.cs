@@ -17,6 +17,7 @@ namespace Selenium_bot_template
 
         public IWebDriver EnterWithChrome()
         {
+            Log("Starting Chrome.");
             Driver = new FirefoxDriver();
             wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(12));
             JS = Driver as IJavaScriptExecutor;
@@ -25,16 +26,25 @@ namespace Selenium_bot_template
 
         public IWebDriver EnterWithFirefox()
         {
+            Log("Starting Firefox.");
             Driver = new FirefoxDriver();
             wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(12));
             JS = Driver as IJavaScriptExecutor;
             return Driver;
         }
 
+        public void Log(string text)
+        {
+            MainWindow.UI.Dispatcher.Invoke((Action)(() =>
+            {
+                MainWindow.UI.LogBox.Text += text + "\n";
+
+            }));
+        }
+
         public void BotActions()
         {
-            Wait(20000);
-
+            EnterWithFirefox();
         }
     }
 }

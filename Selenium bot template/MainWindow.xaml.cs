@@ -21,12 +21,14 @@ namespace Selenium_bot_template
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow UI;
         public static ManualResetEvent mre = new ManualResetEvent(true);
         Bot bot = new Bot();
         Thread botThread;
         public MainWindow()
         {
             InitializeComponent();
+            UI = this;
         }
 
         private void StatButton_Click(object sender, RoutedEventArgs e)

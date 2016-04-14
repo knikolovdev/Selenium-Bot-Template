@@ -33,5 +33,6 @@
         <StatusBar Grid.Row="2" Grid.Column="0" Height="Auto" Opacity="0.3" Margin="1,0,0,0">
             <StatusBarItem>Ready</StatusBarItem>
         </StatusBar>
+        <TextBox x:Name="LogBox" HorizontalAlignment="Left" Height="254" Margin="265,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="242" Opacity="0.8"/>
     </Grid>
 </Window>
