@@ -4,6 +4,7 @@ Template for writing Selenium bots in C# with many basic necessities prepared. I
 ## Features
 1. Styled WPF User Interface ( dark themed )
       * Also there is an image I use for background
+      * Menu panel on top with working exit button
 2. My Selenium helper functions included
       * Includes many functions for easy element selection and element waiting
       * Functions include error handling - error in message box + sound, so bot user will understand whats the problem.
