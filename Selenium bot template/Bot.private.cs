@@ -96,6 +96,26 @@ namespace Selenium_bot_template
                 return null;
             }
         }
+
+        /// <summary>
+        /// IWebElement element = Driver.FindElement(By.TagName(TagName));
+        /// </summary>
+        /// <param name="TagName"></param>
+        /// <returns></returns>
+        private IWebElement TagName(string TagName)
+        {
+            try
+            {
+                IWebElement element = Driver.FindElement(By.TagName(TagName));
+                return element;
+            }
+            catch
+            {
+                SystemSounds.Asterisk.Play();
+                MessageBox.Show(string.Format("Element with TagName \"{0}\" not found !", TagName));
+                return null;
+            }
+        }
         /// <summary>
         /// Shorthand for Driver.FindElement(By.LinkText(LinkText))
         /// </summary>

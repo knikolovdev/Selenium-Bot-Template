@@ -1,0 +1,1786 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LiteDB</name>
+    </assembly>
+    <members>
+        <member name="M:LiteDB.LiteCollection`1.Include(System.Action{`0})">
+            <summary>
+            Run an include action in each document returned by Find(), FindById(), FindOne() and All() methods. Useful for load reference documents when nedded.
+            Returns a new Collection with this action included
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Drop">
+            <summary>
+            Drop a collection deleting all documents and indexes
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.InsertBulk(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Bulk documents to a collection - use data chunks for most efficient insert
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.GetCollectionPage(System.Boolean)">
+            <summary>
+            Get the collection page only when nedded. Gets from cache always to garantee that wil be the last (in case of _clearCache will get a new one)
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.GetBsonCollection">
+            <summary>
+            Returns a new instance of this collection but using BsonDocument as T - Copy _pageID to avoid new collection page search
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Delete(LiteDB.BsonValue)">
+            <summary>
+            Remove an document in collection using Document Id - returns false if not found document
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Delete(LiteDB.Query)">
+            <summary>
+            Remove all document based on a Query object. Returns removed document counts
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Remove all document based on a LINQ query. Returns removed document counts
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.EnsureIndex(System.String,LiteDB.IndexOptions)">
+            <summary>
+            Create a new permanent index in all documents inside this collections if index not exists already. Returns true if index was created or false if already exits
+            </summary>
+            <param name="field">Document field name (case sensitive)</param>
+            <param name="options">All index options</param>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.EnsureIndex(System.String,System.Boolean)">
+            <summary>
+            Create a new permanent index in all documents inside this collections if index not exists already. Returns true if index was created or false if already exits
+            </summary>
+            <param name="field">Document field name (case sensitive)</param>
+            <param name="unique">All index options</param>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.EnsureIndex``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean)">
+            <summary>
+            Create a new permanent index in all documents inside this collections if index not exists already.
+            </summary>
+            <param name="property">Property linq expression</param>
+            <param name="unique">Create a unique values index?</param>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.EnsureIndex``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},LiteDB.IndexOptions)">
+            <summary>
+            Create a new permanent index in all documents inside this collections if index not exists already.
+            </summary>
+            <param name="property">Property linq expression</param>
+            <param name="options">Use all indexes options</param>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.GetIndexes">
+            <summary>
+            Returns all indexes in this collections
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.DropIndex(System.String)">
+            <summary>
+            Drop index and release slot for another index
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Find(LiteDB.Query,System.Int32,System.Int32)">
+            <summary>
+            Find documents inside a collection using Query object. Must have indexes in query expression 
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            Find documents inside a collection using Linq expression. Must have indexes in linq expression 
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.FindById(LiteDB.BsonValue)">
+            <summary>
+            Find a document using Document Id. Returns null if not found.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.FindOne(LiteDB.Query)">
+            <summary>
+            Find the first document using Query object. Returns null if not found. Must have index on query expression.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.FindOne(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Find the first document using Linq expression. Returns null if not found. Must have indexes on predicate.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.FindAll">
+            <summary>
+            Returns all documents inside collection order by _id index.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Count">
+            <summary>
+            Get document count using property on collection.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Count(LiteDB.Query)">
+            <summary>
+            Count documnets with a query. This method does not deserialize any document. Needs indexes on query expression
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Count documnets with a query. This method does not deserialize any document. Needs indexes on query expression
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Exists(LiteDB.Query)">
+            <summary>
+            Returns true if query returns any document. This method does not deserialize any document. Needs indexes on query expression
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Exists(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Returns true if query returns any document. This method does not deserialize any document. Needs indexes on query expression
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Min(System.String)">
+            <summary>
+            Returns the first/min value from a index field
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Min">
+            <summary>
+            Returns the first/min _id field
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Min``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Returns the first/min field using a linq expression
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Max(System.String)">
+            <summary>
+            Returns the last/max value from a index field
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Max">
+            <summary>
+            Returns the last/max _id field
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Returns the last/max field using a linq expression
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Insert(`0)">
+            <summary>
+            Insert a new document to this collection. Document Id must be a new value in collection - Returns document Id
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Insert(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Insert an array of new documents to this collection. Document Id must be a new value in collection
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Update(`0)">
+            <summary>
+            Update a document in this collection. Returns false if not found document in collection
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteCollection`1.Update(LiteDB.BsonValue,`0)">
+            <summary>
+            Update a document in this collection. Returns false if not found document in collection
+            </summary>
+        </member>
+        <member name="P:LiteDB.LiteCollection`1.Name">
+            <summary>
+            Get collection name
+            </summary>
+        </member>
+        <member name="P:LiteDB.LiteCollection`1.Database">
+            <summary>
+            Gets database object reference
+            </summary>
+        </member>
+        <member name="T:LiteDB.DbRef`1">
+            <summary>
+            Creates a field that is a reference for another document from another collection. T is another type
+            </summary>
+        </member>
+        <member name="M:LiteDB.DbRef`1.#ctor">
+            <summary>
+            Used only for serialization/deserialize
+            </summary>
+        </member>
+        <member name="M:LiteDB.DbRef`1.#ctor(System.String,LiteDB.BsonValue)">
+            <summary>
+            Initialize using reference collection name and collection Id
+            </summary>
+        </member>
+        <member name="M:LiteDB.DbRef`1.#ctor(LiteDB.LiteCollection{`0},LiteDB.BsonValue)">
+            <summary>
+            Initialize using reference collection name and collection Id
+            </summary>
+        </member>
+        <member name="M:LiteDB.DbRef`1.Fetch(LiteDB.LiteDatabase)">
+            <summary>
+            Fetch document reference return them. After fetch, you can use "Item" proerty do get ref document
+            </summary>
+        </member>
+        <member name="T:LiteDB.LiteDatabase">
+            <summary>
+            The LiteDB database. Used for create a LiteDB instance and use all storage resoures. It's the database connection
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.RunCommand(System.String)">
+            <summary>
+            Run a shell command in current database. Returns a BsonValue as result
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.OnVersionUpdate(System.Int32)">
+            <summary>
+            Virtual method for update database when a new version (from coneection string) was setted
+            </summary>
+            <param name="newVersion">The new database version</param>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.UpdateDatabaseVersion">
+            <summary>
+            Update database version, when necessary
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.GetDatabaseInfo">
+            <summary>
+            Get all database information
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.#ctor(System.String)">
+            <summary>
+            Starts LiteDB database. Open database file or create a new one if not exits
+            </summary>
+            <param name="connectionString">Full filename or connection string</param>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.GetCollection``1(System.String)">
+            <summary>
+            Get a collection using a entity class as strong typed document. If collection does not exits, create a new one.
+            </summary>
+            <param name="name">Collection name (case insensitive)</param>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.GetCollection(System.String)">
+            <summary>
+            Get a collection using a generic BsonDocument. If collection does not exits, create a new one.
+            </summary>
+            <param name="name">Collection name (case insensitive)</param>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.GetCollectionNames">
+            <summary>
+            Get all collections name inside this database.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.CollectionExists(System.String)">
+            <summary>
+            Checks if a collection exists on database. Collection name is case unsensitive
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.DropCollection(System.String)">
+            <summary>
+            Drop a collection and all data + indexes
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.RenameCollection(System.String,System.String)">
+            <summary>
+            Rename a collection. Returns false if oldName does not exists or newName already exists
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.BeginTrans">
+            <summary>
+            Starts a new transaction. After this command, all write operations will be first in memory and will persist on disk
+            only when call Commit() method. If any error occurs, a Rollback() method will run.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.Commit">
+            <summary>
+            Persist all changes on disk. Always use this method to finish your changes on database
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteDatabase.Rollback">
+            <summary>
+            Cancel all write operations and keep datafile as is before BeginTrans() called.
+            Rollback are implicit on a database operation error, so you do not need call for database errors (only on business rules).
+            </summary>
+        </member>
+        <member name="P:LiteDB.LiteDatabase.FileStorage">
+            <summary>
+            Returns a special collection for storage files/stream inside datafile
+            </summary>
+        </member>
+        <member name="T:LiteDB.ObjectId">
+            <summary>
+            Represent a 12-bytes BSON type used in document Id
+            </summary>
+        </member>
+        <member name="F:LiteDB.ObjectId.Empty">
+            <summary>
+            A zero 12-bytes ObjectId
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.#ctor">
+            <summary>
+            Initializes a new empty instance of the ObjectId class.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.#ctor(System.Int32,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            Initializes a new instance of the ObjectId class from ObjectId vars.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.#ctor(LiteDB.ObjectId)">
+            <summary>
+            Initializes a new instance of ObjectId class from another ObjectId.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ObjectId class from hex string.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the ObjectId class from byte array.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.FromHex(System.String)">
+            <summary>
+            Convert hex value string in byte array
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.Equals(LiteDB.ObjectId)">
+            <summary>
+            Equalses the specified other.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to this instance.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.CompareTo(LiteDB.ObjectId)">
+            <summary>
+            Compares two instances of ObjectId
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.ToByteArray">
+            <summary>
+            Represent ObjectId as 12 bytes array
+            </summary>
+        </member>
+        <member name="M:LiteDB.ObjectId.NewObjectId">
+            <summary>
+            Creates a new ObjectId.
+            </summary>
+        </member>
+        <member name="P:LiteDB.ObjectId.Timestamp">
+            <summary>
+            Get timestamp
+            </summary>
+        </member>
+        <member name="P:LiteDB.ObjectId.Machine">
+            <summary>
+            Get machine number
+            </summary>
+        </member>
+        <member name="P:LiteDB.ObjectId.Pid">
+            <summary>
+            Get pid number
+            </summary>
+        </member>
+        <member name="P:LiteDB.ObjectId.Increment">
+            <summary>
+            Get increment
+            </summary>
+        </member>
+        <member name="P:LiteDB.ObjectId.CreationTime">
+            <summary>
+            Get creation time
+            </summary>
+        </member>
+        <member name="T:LiteDB.QueryContains">
+            <summary>
+            Contains query do not work with index, only full scan
+            </summary>
+        </member>
+        <member name="T:LiteDB.Query">
+            <summary>
+            Class helper to create query using indexes in database. All methods are statics.
+            Queries can be executed in 2 ways: Index Seek (fast), Index Scan (good)
+            </summary>
+        </member>
+        <member name="F:LiteDB.Query.Ascending">
+            <summary>
+            Indicate when a query must execute in ascending order
+            </summary>
+        </member>
+        <member name="F:LiteDB.Query.Descending">
+            <summary>
+            Indicate when a query must execute in descending order
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.All(System.Int32)">
+            <summary>
+            Returns all documents using _id index order
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.All(System.String,System.Int32)">
+            <summary>
+            Returns all documents using field index order
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.EQ(System.String,LiteDB.BsonValue)">
+            <summary>
+            Returns all documents that value are equals to value (=)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.LT(System.String,LiteDB.BsonValue)">
+            <summary>
+            Returns all documents that value are less than value (&lt;)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.LTE(System.String,LiteDB.BsonValue)">
+            <summary>
+            Returns all documents that value are less than or equals value (&lt;=)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.GT(System.String,LiteDB.BsonValue)">
+            <summary>
+            Returns all document that value are greater than value (&gt;)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.GTE(System.String,LiteDB.BsonValue)">
+            <summary>
+            Returns all documents that value are greater than or equals value (&gt;=)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.Between(System.String,LiteDB.BsonValue,LiteDB.BsonValue)">
+            <summary>
+            Returns all document that values are between "start" and "end" values (BETWEEN)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.StartsWith(System.String,System.String)">
+            <summary>
+            Returns all documents that starts with value (LIKE)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.Contains(System.String,System.String)">
+            <summary>
+            Returns all documents that contains value (CONTAINS)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.Not(System.String,LiteDB.BsonValue)">
+            <summary>
+            Returns all documents that are not equals to value
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.In(System.String,LiteDB.BsonArray)">
+            <summary>
+            Returns all documents that has value in values list (IN)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.In(System.String,LiteDB.BsonValue[])">
+            <summary>
+            Returns all documents that has value in values list (IN)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.And(LiteDB.Query,LiteDB.Query)">
+            <summary>
+            Returns document that exists in BOTH queries results (Intersect).
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.Or(LiteDB.Query,LiteDB.Query)">
+            <summary>
+            Returns documents that exists in ANY queries results (Union).
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.ExecuteIndex(LiteDB.IndexService,LiteDB.CollectionIndex)">
+            <summary>
+            Abstract method that must be implement for index seek/scan - Returns IndexNodes that match with index
+            </summary>
+        </member>
+        <member name="M:LiteDB.Query.Run``1(LiteDB.LiteCollection{``0})">
+            <summary>
+            Find witch index will be used and run Execute method - define ExecuteMode here
+            </summary>
+        </member>
+        <member name="T:LiteDB.QueryVisitor`1">
+            <summary>
+            Class helper to create Queries based on Linq expressions
+            </summary>
+        </member>
+        <member name="M:LiteDB.QueryVisitor`1.GetBsonField``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Get a Bson field from a simple Linq expression: x => x.CustomerName
+            </summary>
+        </member>
+        <member name="M:LiteDB.QueryVisitor`1.GetBsonField(System.String)">
+            <summary>
+            Get a bson string field based on class PropertyInfo using BsonMapper class
+            Support Name1.Name2 dotted notation
+            </summary>
+        </member>
+        <member name="M:LiteDB.QueryVisitor`1.GetTypeField(System.Type,System.String,System.Type@)">
+            <summary>
+            Get a field name passing mapper type and returns property type
+            </summary>
+        </member>
+        <member name="T:LiteDB.QueryNot">
+            <summary>
+            Not is an Index Scan operation
+            </summary>
+        </member>
+        <member name="T:LiteDB.QueryAll">
+            <summary>
+            All is an Index Scan operation
+            </summary>
+        </member>
+        <member name="T:LiteDB.JsonReader">
+            <summary>
+            A class that read a json string using a tokenizer (without regex)
+            </summary>
+        </member>
+        <member name="T:LiteDB.JsonTokenizer">
+            <summary>
+            Class that parse a json string and returns in json token
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonTokenizer.Read">
+            <summary>
+            Read next char in stream and set in _current
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonTokenizer.ReadToken">
+            <summary>
+            Read next json token
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonTokenizer.EatWhitespace">
+            <summary>
+            Eat all whitespaces - used before a valid token
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonTokenizer.ReadWord">
+            <summary>
+            Read a word without "
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonTokenizer.ReadNumber">
+            <summary>
+            Read a number - it's accepts all number char, but not validate. When run Convert, .NET will check if number is correct
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonTokenizer.ReadString">
+            <summary>
+            Read a string removing open and close "
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonIgnoreAttribute">
+            <summary>
+            Indicate that property will not be persist in Bson serialization
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonIdAttribute">
+            <summary>
+            Indicate that property will be used as BsonDocument Id
+            </summary>
+        </member>
+        <member name="P:LiteDB.LiteFileStream.FileInfo">
+            <summary>
+            Get file information
+            </summary>
+        </member>
+        <member name="T:LiteDB.LiteFileInfo">
+            <summary>
+            Represets a file inside storage collection
+            </summary>
+        </member>
+        <member name="F:LiteDB.LiteFileInfo.ID_PATTERN">
+            <summary>
+            File id have a specific format - it's like file path.
+            </summary>
+        </member>
+        <member name="F:LiteDB.LiteFileInfo.CHUNK_SIZE">
+            <summary>
+            Number of bytes on each chunk document to store
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileInfo.GetChunckId(System.String,System.Int32)">
+            <summary>
+            Returns chunck Id for a file
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileInfo.OpenRead">
+            <summary>
+            Open file stream to read from database
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileInfo.SaveAs(System.String,System.Boolean)">
+            <summary>
+            Save file content to a external file
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileInfo.CopyTo(System.IO.Stream)">
+            <summary>
+            Copy file content to another stream
+            </summary>
+        </member>
+        <member name="T:LiteDB.LiteFileStorage">
+            <summary>
+            Storage is a special collection to store files/streams.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.Upload(LiteDB.LiteFileInfo,System.IO.Stream)">
+            <summary>
+            Insert a new file content inside datafile in _files collection
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.Upload(System.String)">
+            <summary>
+            Upload a file to FileStorage using Path.GetFilename as file Id
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.SetMetadata(System.String,LiteDB.BsonDocument)">
+            <summary>
+            Update metada on a file. File must exisits
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.Download(System.String,System.IO.Stream)">
+            <summary>
+            Copy all file content to a steam
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.OpenRead(System.String)">
+            <summary>
+            Load data inside storage and returns as Stream
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.OpenRead(LiteDB.LiteFileInfo)">
+            <summary>
+            Load data inside storage and returns as Stream
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.FindById(System.String)">
+            <summary>
+            Find a file inside datafile and returns FileEntry instance. Returns null if not found
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.Find(System.String)">
+            <summary>
+            Returns all FileEntry founded starting with id passed.
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.Exists(System.String)">
+            <summary>
+            Returns if a file exisits in database
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.FindAll">
+            <summary>
+            Returns all FileEntry inside database
+            </summary>
+        </member>
+        <member name="M:LiteDB.LiteFileStorage.Delete(System.String)">
+            <summary>
+            Delete a file inside datafile and all metadata related
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonValue">
+            <summary>
+            Represent a Bson Value used in BsonDocument
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonValue.Null">
+            <summary>
+            Represent a Null bson type
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonValue.MinValue">
+            <summary>
+            Represent a MinValue bson type
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonValue.MaxValue">
+            <summary>
+            Represent a MaxValue bson type
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonValue.GetBytesCount">
+            <summary>
+            Returns how many bytes this BsonValue will use to persist in index writes
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonValue.Normalize(LiteDB.IndexOptions)">
+            <summary>
+            Normalize a string value using IndexOptions and returns a new BsonValue - if is not a string, returns some BsonValue instance
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonValue.Type">
+            <summary>
+            Indicate BsonType of this BsonValue
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonValue.RawValue">
+            <summary>
+            Get internal .NET value object
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonType">
+            <summary>
+            All supported BsonTypes in sort order
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonDocument.Add(System.String,LiteDB.BsonValue)">
+            <summary>
+            Add fields in fluent api
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonDocument.ContainsKey(System.String)">
+            <summary>
+            Returns if object contains a named property
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonDocument.RemoveKey(System.String)">
+            <summary>
+            Remove a specific key on object
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonDocument.IsValidFieldName(System.String)">
+            <summary>
+            Test if field name is a valid string: only \w+(\w-)*
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonDocument.Get(System.String)">
+            <summary>
+            Get value from a path - supports dotted path like: Customer.Address.Street
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonDocument.Set(System.String,LiteDB.BsonValue)">
+            <summary>
+            Set value to a path - supports dotted path like: Customer.Address.Street - Fluent API (returns same BsonDocument)
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonDocument.Item(System.String)">
+            <summary>
+            Get/Set a field for document. Fields are case sensitive
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonDocument.Keys">
+            <summary>
+            Returns all object keys with _id in first order
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonDocument.Count">
+            <summary>
+            Returns how many fields this object contains
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonSerializer">
+            <summary>
+            Class to call method for convert BsonDocument to/from byte[] - based on http://bsonspec.org/spec.html
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonWriter.WriteDocument(System.IO.BinaryWriter,LiteDB.BsonDocument)">
+            <summary>
+            Write a bson document
+            </summary>
+        </member>
+        <member name="T:LiteDB.JsonSerializer">
+            <summary>
+            Static class for serialize/deserialize BsonDocuments into json extended format
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.Boolean,System.Boolean)">
+            <summary>
+            Json serialize a BsonValue into a String
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.Serialize(LiteDB.BsonValue,System.IO.TextWriter,System.Boolean,System.Boolean)">
+            <summary>
+            Json serialize a BsonValue into a TextWriter
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.Deserialize(System.String)">
+            <summary>
+            Deserialize a Json string into a BsonValue
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.Deserialize(System.IO.TextReader)">
+            <summary>
+            Deserialize a Json TextReader into a BsonValue
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.DeserializeArray(System.String)">
+            <summary>
+            Deserialize a json array as an IEnumerable of BsonValue
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.DeserializeArray(System.IO.TextReader)">
+            <summary>
+            Deserialize a json array as an IEnumerable of BsonValue reading on demand TextReader
+            </summary>
+        </member>
+        <member name="M:LiteDB.JsonSerializer.Deserialize(LiteDB.StringScanner)">
+            <summary>
+            Deserialize a json using a StringScanner and returns BsonValue
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonMapper">
+            <summary>
+            Class that converts your entity class to/from BsonDocument
+            If you prefer use a new instance of BsonMapper (not Global), be sure cache this instance for better performance 
+            Serialization rules:
+                - Classes must be "public" with a public constructor (without parameters)
+                - Properties must have public getter (can be read-only)
+                - Entity class must have Id property, [ClassName]Id property or [BsonId] attribute
+                - No circular references
+                - Fields are not valid
+                - IList, Array supports
+                - IDictionary supports (Key must be a simple datatype - converted by ChangeType)
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonMapper._mapper">
+            <summary>
+            Mapping cache between Class/BsonDocument
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonMapper._customSerializer">
+            <summary>
+            Map serializer/deserialize for custom types
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonMapper._autoId">
+            <summary>
+            Map for autoId type based functions
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonMapper.ResolvePropertyName">
+            <summary>
+            A resolver name property
+            </summary>
+        </member>
+        <member name="F:LiteDB.BsonMapper.Global">
+            <summary>
+            Global BsonMapper instance
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.RegisterType``1(System.Func{``0,LiteDB.BsonValue},System.Func{LiteDB.BsonValue,``0})">
+            <summary>
+            Register a custom type serializer/deserialize function
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.RegisterAutoId``1(System.Func{``0,System.Boolean},System.Func{LiteDB.LiteCollection{LiteDB.BsonDocument},``0})">
+            <summary>
+            Register a custom Auto Id generator function for a type
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.SetAutoId(System.Object,LiteDB.LiteCollection{LiteDB.BsonDocument})">
+            <summary>
+            Set new Id in entity class if entity needs one
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.GetPropertyMapper(System.Type)">
+            <summary>
+            Get property mapper between typed .NET class and BsonDocument - Cache results
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.GetIndexFromAttribute``1(System.String)">
+            <summary>
+            Search for [BsonIndex] in PropertyMapper. If not found, returns null
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.ToDocument(System.Object)">
+            <summary>
+            Serialize a entity class to BsonDocument
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.Serialize(System.Object)">
+            <summary>
+            Create a instance of a object convered in BsonValue object.
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.ToObject``1(LiteDB.BsonDocument)">
+            <summary>
+            Deserialize a BsonDocument to entity class
+            </summary>
+        </member>
+        <member name="M:LiteDB.BsonMapper.Deserialize``1(LiteDB.BsonValue)">
+            <summary>
+            Deserialize an BsonValue to .NET object typed in T
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonMapper.SerializeNullValues">
+            <summary>
+            Indicate that mapper do not serialize null values
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonMapper.TrimWhitespace">
+            <summary>
+            Apply .Trim() in strings
+            </summary>
+        </member>
+        <member name="P:LiteDB.BsonMapper.EmptyStringToNull">
+            <summary>
+            Convert EmptyString to Null
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonFieldAttribute">
+            <summary>
+            Set a name to this property in BsonDocument
+            </summary>
+        </member>
+        <member name="T:LiteDB.BsonIndexAttribute">
+            <summary>
+            Add an index in this entity property.
+            </summary>
+        </member>
+        <member name="P:LiteDB.AutoId.IsEmpty">
+            <summary>
+            Function to test if type is empty
+            </summary>
+        </member>
+        <member name="P:LiteDB.AutoId.NewId">
+            <summary>
+            Function that implements how generate a new Id for this type
+            </summary>
+        </member>
+        <member name="T:LiteDB.PropertyMapper">
+            <summary>
+            Internal representation for a .NET Property mapped to BsonDocument
+            </summary>
+        </member>
+        <member name="T:LiteDB.Reflection">
+            <summary>
+            Helper class to get entity properties and map as BsonValue
+            </summary>
+        </member>
+        <member name="M:LiteDB.Reflection.GetIdProperty(System.Type)">
+            <summary>
+            Gets PropertyInfo that refers to Id from a document object.
+            </summary>
+        </member>
+        <member name="M:LiteDB.Reflection.GetProperties(System.Type,System.Func{System.String,System.String})">
+            <summary>
+            Read all properties from a type - store in a static cache - exclude: Id and [BsonIgnore]
+            </summary>
+        </member>
+        <member name="M:LiteDB.Reflection.CreateInstance(System.Type)">
+            <summary>
+            Create a new instance from a Type
+            </summary>
+        </member>
+        <member name="M:LiteDB.Shell.Commands.BaseCollection.ReadCollection(LiteDB.LiteDatabase,LiteDB.StringScanner)">
+            <summary>
+            Read collection name from db.(colname).(command)
+            </summary>
+        </member>
+        <member name="M:LiteDB.Shell.Commands.BaseFileStorage.ReadId(LiteDB.StringScanner)">
+            <summary>
+            Read Id file
+            </summary>
+        </member>
+        <member name="T:LiteDB.DataPage">
+            <summary>
+            The DataPage thats stores object data.
+            </summary>
+        </member>
+        <member name="F:LiteDB.BasePage.PAGE_SIZE">
+            <summary>
+            The size of each page in disk - 4096 is NTFS default
+            </summary>
+        </member>
+        <member name="F:LiteDB.BasePage.PAGE_HEADER_SIZE">
+            <summary>
+            This size is used bytes in header pages 17 bytes
+            </summary>
+        </member>
+        <member name="F:LiteDB.BasePage.PAGE_AVAILABLE_BYTES">
+            <summary>
+            Bytes avaiable to store data removing page header size - 4079 bytes
+            </summary>
+        </member>
+        <member name="M:LiteDB.BasePage.UpdateItemCount">
+            <summary>
+            Every page must imeplement this ItemCount + FreeBytes
+            Must be called after Items are updates (insert/deletes) to keep variables ItemCount and FreeBytes synced
+            </summary>
+        </member>
+        <member name="M:LiteDB.BasePage.Clear">
+            <summary>
+            Clear page content (using when delete a page)
+            </summary>
+        </member>
+        <member name="M:LiteDB.BasePage.CopyTo``1">
+            <summary>
+            Create a new espefic page, copy all header content
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.PageID">
+            <summary>
+            Represent page number - start in 0 with HeaderPage [4 bytes]
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.PrevPageID">
+            <summary>
+            Represent the previous page. Used for page-sequences - MaxValue represent that has NO previous page [4 bytes]
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.NextPageID">
+            <summary>
+            Represent the next page. Used for page-sequences - MaxValue represent that has NO next page [4 bytes]
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.PageType">
+            <summary>
+            Indicate the page type [1 byte]
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.ItemCount">
+            <summary>
+            Used for all pages to count itens inside this page(bytes, nodes, blocks, ...)
+            Its Int32 but writes in UInt16
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.FreeBytes">
+            <summary>
+            Used to find a free page using only header search [used in FreeList]
+            Its Int32 but writes in UInt16
+            Its updated when a page modify content length (add/remove items)
+            </summary>
+        </member>
+        <member name="P:LiteDB.BasePage.IsDirty">
+            <summary>
+            Indicate that this page is dirty (was modified) and must persist when commited [not-persistable]
+            </summary>
+        </member>
+        <member name="F:LiteDB.DataPage.DATA_RESERVED_BYTES">
+            <summary>
+            If a Data Page has less that free space, it's considered full page for new items. Can be used only for update (DataPage) ~ 50% PAGE_AVAILABLE_BYTES
+            This value is used for minimize 
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataPage.Clear">
+            <summary>
+            Clear page content - dataBlocks
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataPage.UpdateItemCount">
+            <summary>
+            Update freebytes + items count
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataPage.DataBlocks">
+            <summary>
+            Returns all data blocks - Each block has one object
+            </summary>
+        </member>
+        <member name="F:LiteDB.IndexPage.INDEX_RESERVED_BYTES">
+            <summary>
+            If a Index Page has less that this free space, it's considered full page for new items.
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexPage.Clear">
+            <summary>
+            Clear page content - nodes
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexPage.UpdateItemCount">
+            <summary>
+            Update freebytes + items count
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionService.Get(System.String)">
+            <summary>
+            Get a exist collection. Returns null if not exists
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionService.Add(System.String)">
+            <summary>
+            Add a new collection. Check if name the not exists
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionService.GetAll">
+            <summary>
+            Get all collections
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionService.Drop(LiteDB.CollectionPage)">
+            <summary>
+            Drop a collection - remove all data pages + indexes pages
+            </summary>
+        </member>
+        <member name="T:LiteDB.JournalService">
+            <summary>
+            Service to create a journal file to garantee write operations will be atomic
+            </summary>
+        </member>
+        <member name="M:LiteDB.JournalService.WritePageInJournal(System.IO.BinaryWriter,LiteDB.BasePage)">
+            <summary>
+            Write a page in sequence, not in absolute position
+            </summary>
+        </member>
+        <member name="T:LiteDB.RecoveryService">
+            <summary>
+            Service for restore datafile with there a problem when save on disk
+            </summary>
+        </member>
+        <member name="T:LiteDB.IndexService">
+            <summary>
+            Implement a Index service - Add/Remove index nodes on SkipList
+            Based on: http://igoro.com/archive/skip-lists-are-fascinating/
+            </summary>
+        </member>
+        <member name="F:LiteDB.IndexService.MAX_INDEX_LENGTH">
+            <summary>
+            Max size of a index entry - usde for string, binary, array and documents
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.CreateIndex(LiteDB.CollectionPage)">
+            <summary>
+            Create a new index and returns head page address (skip list)
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.AddNode(LiteDB.CollectionIndex,LiteDB.BsonValue)">
+            <summary>
+            Insert a new node index inside an collection index. Flip coin to know level
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.AddNode(LiteDB.CollectionIndex,LiteDB.BsonValue,System.Byte)">
+            <summary>
+            Insert a new node index inside an collection index.
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.Delete(LiteDB.CollectionIndex,LiteDB.PageAddress)">
+            <summary>
+            Delete indexNode from a Index  ajust Next/Prev nodes
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.DropIndex(LiteDB.CollectionIndex)">
+            <summary>
+            Drop all indexes pages
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.GetNode(LiteDB.PageAddress)">
+            <summary>
+            Get a node inside a page using PageAddress - Returns null if address IsEmpty
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.FlipCoin">
+            <summary>
+            Flip coin - skip list - returns level node (start in 1)
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.Find(LiteDB.CollectionIndex,LiteDB.BsonValue,System.Boolean,System.Int32)">
+            <summary>
+            Find first node that index match with value. If not found but sibling = true, returns near node (only non-unique index)
+            Before find, value must be normalized
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexService.FindBoundary(LiteDB.CollectionIndex,LiteDB.IndexNode,LiteDB.BsonValue,System.Int32,System.Int32)">
+            <summary>
+            Go first/last occurence of this index value
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataService.Insert(LiteDB.CollectionPage,System.Byte[])">
+            <summary>
+            Insert data inside a datapage. Returns dataPageID that idicates the first page
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataService.Update(LiteDB.CollectionPage,LiteDB.PageAddress,System.Byte[])">
+            <summary>
+            Update data inside a datapage. If new data can be used in same datapage, just update. Otherside, copy content to a new ExtendedPage
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataService.Read(LiteDB.PageAddress,System.Boolean)">
+            <summary>
+            Read all data from datafile using a pageID as reference. If data is not in DataPage, read from ExtendPage. If readExtendData = false, do not read extended data 
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataService.ReadExtendData(System.UInt32)">
+            <summary>
+            Read all data from a extended page with all subsequences pages if exits
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataService.Delete(LiteDB.CollectionPage,LiteDB.PageAddress)">
+            <summary>
+            Delete one dataBlock
+            </summary>
+        </member>
+        <member name="M:LiteDB.DataService.StoreExtendData(LiteDB.ExtendPage,System.Byte[])">
+            <summary>
+            Store all bytes in one extended page. If data ir bigger than a page, store in more pages and make all in sequence
+            </summary>
+        </member>
+        <member name="T:LiteDB.CollectionPage">
+            <summary>
+            Represents the collection page AND a collection item, because CollectionPage represent a Collection (1 page = 1 collection). All collections pages are linked with Prev/Next links
+            </summary>
+        </member>
+        <member name="F:LiteDB.CollectionPage.FreeDataPageID">
+            <summary>
+            Get a reference for the free list data page - its private list per collection - each DataPage contains only data for 1 collection (no mixing)
+            Must to be a Field to be used as parameter reference
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionPage.GetFreeIndex">
+            <summary>
+            Returns first free index slot to be used 
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionPage.GetIndex(System.String)">
+            <summary>
+            Get index from field name (index field name is case sensitive) - returns null if not found
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionPage.GetIndexes(System.Boolean)">
+            <summary>
+            Returns all used indexes
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionPage.CollectionName">
+            <summary>
+            Name of collection
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionPage.DocumentCount">
+            <summary>
+            Get the number of documents inside this collection
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionPage.Indexes">
+            <summary>
+            Get all indexes from this collection - includes non-used indexes
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionPage.PK">
+            <summary>
+            Get primary key index (_id index)
+            </summary>
+        </member>
+        <member name="F:LiteDB.CollectionIndex.INDEX_PER_COLLECTION">
+            <summary>
+            Total indexes per collection - it's fixed because I will used fixed arrays allocations
+            </summary>
+        </member>
+        <member name="F:LiteDB.CollectionIndex.FreeIndexPageID">
+            <summary>
+            Get a reference for the free list index page - its private list per collection/index (must be a Field to be used as reference parameter)
+            </summary>
+        </member>
+        <member name="M:LiteDB.CollectionIndex.Clear">
+            <summary>
+            Clear all index information
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.Slot">
+            <summary>
+            Represent slot position on index array on dataBlock/collection indexes - non-persistable
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.Field">
+            <summary>
+            Field name
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.Options">
+            <summary>
+            Index options like unique and ignore case
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.HeadNode">
+            <summary>
+            Head page address for this index
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.TailNode">
+            <summary>
+            A link pointer to tail node
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.IsEmpty">
+            <summary>
+            Returns if this index slot is empty and can be used as new index
+            </summary>
+        </member>
+        <member name="P:LiteDB.CollectionIndex.Page">
+            <summary>
+            Get a reference for page
+            </summary>
+        </member>
+        <member name="T:LiteDB.IndexOptions">
+            <summary>
+            A class that represent all index options used on a index creation
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexOptions.Unique">
+            <summary>
+            Unique keys?
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexOptions.IgnoreCase">
+            <summary>
+            Ignore case? (convert all strings to lowercase)
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexOptions.TrimWhitespace">
+            <summary>
+            Remove all whitespace on start/end string?
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexOptions.EmptyStringToNull">
+            <summary>
+            Convert all empty string to null?
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexOptions.RemoveAccents">
+            <summary>
+            Removing accents on string?
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.Position">
+            <summary>
+            Position of this dataBlock inside a page (store only Position.Index)
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.IndexRef">
+            <summary>
+            Indexes nodes for all indexes for this data block
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.ExtendPageID">
+            <summary>
+            If object is bigger than this page - use a ExtendPage (and do not use Data array)
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.Data">
+            <summary>
+            Data of a record - could be empty if is used in ExtedPage
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.Page">
+            <summary>
+            Get a reference for page
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.Length">
+            <summary>
+            Get length of this dataBlock - not persistable
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.ExtendData">
+            <summary>
+            Represent data from Extend Pages - not persistable and used only when load data
+            </summary>
+        </member>
+        <member name="P:LiteDB.DataBlock.Buffer">
+            <summary>
+            A readonly property  (non-persistable) that contains data from this page OR from Extended Pages
+            </summary>
+        </member>
+        <member name="T:LiteDB.IndexNode">
+            <summary>
+            Represent a index node inside a Index Page
+            </summary>
+        </member>
+        <member name="F:LiteDB.IndexNode.MAX_LEVEL_LENGTH">
+            <summary>
+            Max level used on skip list
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexNode.NextPrev(System.Int32,System.Int32)">
+            <summary>
+            Returns Next (order == 1) OR Prev (order == -1)
+            </summary>
+        </member>
+        <member name="M:LiteDB.IndexNode.IsHeadTail(LiteDB.CollectionIndex)">
+            <summary>
+            Returns if this node is header or tail from collection Index
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LiteDB.IndexNode.Position">
+            <summary>
+            Position of this node inside a IndexPage - Store only Position.Index
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.Prev">
+            <summary>
+            Pointer to prev value (used in skip lists - Prev.Length = Next.Length)
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.Next">
+            <summary>
+            Pointer to next value (used in skip lists - Prev.Length = Next.Length)
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.KeyLength">
+            <summary>
+            Length of key - used for calculate Node size
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.Key">
+            <summary>
+            The object value that was indexed
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.DataBlock">
+            <summary>
+            Reference for a datablock - the value
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.Page">
+            <summary>
+            Get page reference
+            </summary>
+        </member>
+        <member name="P:LiteDB.IndexNode.Length">
+            <summary>
+            Get the length size of this node in disk - not persistable
+            </summary>
+        </member>
+        <member name="T:LiteDB.PageAddress">
+            <summary>
+            Represents a page adress inside a page structure - index could be byte offset position OR index in a list
+            </summary>
+        </member>
+        <member name="T:LiteDB.ExtendPage">
+            <summary>
+            Represent a extra data page that contains the object when is not possible store in DataPage (bigger then  PAGE_SIZE or on update has no more space on page)
+            Can be used in sequence of pages to store big objects
+            </summary>
+        </member>
+        <member name="M:LiteDB.ExtendPage.Clear">
+            <summary>
+            Clear page content - Data byte array
+            </summary>
+        </member>
+        <member name="M:LiteDB.ExtendPage.UpdateItemCount">
+            <summary>
+            Update freebytes + items count
+            </summary>
+        </member>
+        <member name="P:LiteDB.ExtendPage.Data">
+            <summary>
+            Represent the part or full of the object - if this page has NextPageID the object is bigger than this page
+            </summary>
+        </member>
+        <member name="T:LiteDB.CacheService">
+            <summary>
+            Represent all cache system and track dirty pages. All pages that load and need to be track for
+            dirty (to be persist after) must be added in this class.
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.GetPage``1(System.UInt32)">
+            <summary>
+            Get a page inside cache system. Returns null if page not existis. 
+            If T is more specific than page that I have in cache, returns null (eg. Page 2 is BasePage in cache and this method call for IndexPage PageId 2)
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.AddPage(LiteDB.BasePage)">
+            <summary>
+            Add a page to cache. if this page is in cache, override (except if is basePage - in this case, copy header)
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.Clear(LiteDB.HeaderPage)">
+            <summary>
+            Empty cache and header page
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.RemoveExtendPages">
+            <summary>
+            Remove from cache only extend pages - useful for FileStorage
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.PersistDirtyPages">
+            <summary>
+            Persist all dirty pages
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.HasDirtyPages">
+            <summary>
+            Checks if cache has dirty pages
+            </summary>
+        </member>
+        <member name="M:LiteDB.CacheService.GetDirtyPages">
+            <summary>
+            Returns all dirty pages including header page (for better write performance, get all pages in PageID increase order)
+            </summary>
+        </member>
+        <member name="P:LiteDB.CacheService.PagesInCache">
+            <summary>
+            Gets total pages in cache for database info
+            </summary>
+        </member>
+        <member name="P:LiteDB.CacheService.Header">
+            <summary>
+            Get header page in cache or request for a new instance if not existis yet
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.GetPage``1(System.UInt32)">
+            <summary>
+            Get a page from cache or from disk (and put on cache)
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.GetSeqPages``1(System.UInt32)">
+            <summary>
+            Read all sequences pages from a start pageID (using NextPageID) 
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.NewPage``1(LiteDB.BasePage)">
+            <summary>
+            Get a new empty page - can be a reused page (EmptyPage) or a clean one (extend datafile) 
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.DeletePage(System.UInt32,System.Boolean)">
+            <summary>
+            Delete an page using pageID - transform them in Empty Page and add to EmptyPageList
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.GetFreePage``1(System.UInt32,System.Int32)">
+            <summary>
+            Returns a page that contains space enouth to data to insert new object - if not exits, create a new Page
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.AddOrRemoveToFreeList(System.Boolean,LiteDB.BasePage,LiteDB.BasePage,System.UInt32@)">
+            <summary>
+            Add or Remove a page in a sequence
+            </summary>
+            <param name="add">Indicate that will add or remove from FreeList</param>
+            <param name="page">Page to add or remove from FreeList</param>
+            <param name="startPage">Page reference where start the header list node</param>
+            <param name="fieldPageID">Field reference, from startPage</param>
+        </member>
+        <member name="M:LiteDB.PageService.AddToFreeList(LiteDB.BasePage,LiteDB.BasePage,System.UInt32@)">
+            <summary>
+            Add a page in free list in desc free size order
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.RemoveToFreeList(LiteDB.BasePage,LiteDB.BasePage,System.UInt32@)">
+            <summary>
+            Remove a page from list - the ease part
+            </summary>
+        </member>
+        <member name="M:LiteDB.PageService.MoveToFreeList(LiteDB.BasePage,LiteDB.BasePage,System.UInt32@)">
+            <summary>
+            When a page is already on a list it's more efficient just move comparing with sinblings
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.CreateNewDatafile(LiteDB.ConnectionString)">
+            <summary>
+            Create a empty database ready to be used using connectionString as parameters
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.ReadPage``1(System.UInt32)">
+            <summary>
+            Create a new Page instance and read data from disk
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.WritePage(LiteDB.BasePage)">
+            <summary>
+            Write a page from memory to disk 
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.WritePage(System.IO.BinaryWriter,LiteDB.BasePage)">
+            <summary>
+            Static method for write a page using a diferent writer - used when create empty datafile
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.AllocateDiskSpace(System.Int64)">
+            <summary>
+            Pre-allocate more disk space to fast write new pages on disk
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.GetWriter">
+            <summary>
+            Get BinaryWriter
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.Lock">
+            <summary>
+            Lock the datafile when start a begin transaction
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.UnLock">
+            <summary>
+            Unlock the datafile
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.ProtectWriteFile(System.Action)">
+            <summary>
+            Lock all file during write operations - avoid reads during inconsistence data
+            </summary>
+        </member>
+        <member name="M:LiteDB.DiskService.TryExec(System.TimeSpan,System.Action)">
+            <summary>
+            Try execute a block of code until timeout when IO lock exception occurs OR access denind
+            </summary>
+        </member>
+        <member name="T:LiteDB.TransactionService">
+            <summary>
+            Manage all transaction and garantee concurrency and recovery
+            </summary>
+        </member>
+        <member name="M:LiteDB.TransactionService.Begin">
+            <summary>
+            Starts a new transaction - lock database to garantee that only one processes is in a transaction
+            </summary>
+        </member>
+        <member name="M:LiteDB.TransactionService.Abort">
+            <summary>
+            Abort a transaction is used when begin and has no changes yet - no writes, no checks
+            </summary>
+        </member>
+        <member name="M:LiteDB.TransactionService.Commit">
+            <summary>
+            Commit the transaction - increese 
+            </summary>
+        </member>
+        <member name="M:LiteDB.TransactionService.AvoidDirtyRead">
+            <summary>
+            This method must be called before read operation to avoid dirty reads.
+            It's occurs when my cache contains pages that was changed in another process
+            </summary>
+        </member>
+        <member name="T:LiteDB.ConnectionString">
+            <summary>
+            Manage ConnectionString to connect and create databases. Can be used as:
+            * If only a word - get from App.Config
+            * If is a path - use all parameters as default
+            * Otherwise, is name=value collection
+            </summary>
+        </member>
+        <member name="P:LiteDB.ConnectionString.Filename">
+            <summary>
+            Path of filename (no default - required key)
+            </summary>
+        </member>
+        <member name="P:LiteDB.ConnectionString.Timeout">
+            <summary>
+            Default Timeout connection to wait for unlock (default: 1 minute)
+            </summary>
+        </member>
+        <member name="P:LiteDB.ConnectionString.JournalEnabled">
+            <summary>
+            Supports recovery mode if a fail during write pages to disk
+            </summary>
+        </member>
+        <member name="P:LiteDB.ConnectionString.JournalFilename">
+            <summary>
+            Jounal filename with full path
+            </summary>
+        </member>
+        <member name="P:LiteDB.ConnectionString.UserVersion">
+            <summary>
+            Define, in connection string, the user database version. When you increse this value
+            LiteDatabase will run OnUpdate method for each new version. If defined, must be >= 1. Default: 1
+            </summary>
+        </member>
+        <member name="F:LiteDB.HeaderPage.HEADER_INFO">
+            <summary>
+            Header info the validate that datafile is a LiteDB file
+            </summary>
+        </member>
+        <member name="F:LiteDB.HeaderPage.FILE_VERSION">
+            <summary>
+            Datafile specification version
+            </summary>
+        </member>
+        <member name="F:LiteDB.HeaderPage.FreeEmptyPageID">
+            <summary>
+            Get/Set the pageID that start sequenece with a complete empty pages (can be used as a new page)
+            </summary>
+        </member>
+        <member name="F:LiteDB.HeaderPage.FirstCollectionPageID">
+            <summary>
+            Get/Set the first collection pageID (used as Field to be passed as reference)
+            </summary>
+        </member>
+        <member name="P:LiteDB.HeaderPage.ChangeID">
+            <summary>
+            Get/Set the changeID of data. When a client read pages, all pages are in the same version. But when OpenTransaction, we need validade that current changeID is the sabe that we have in cache
+            </summary>
+        </member>
+        <member name="P:LiteDB.HeaderPage.LastPageID">
+            <summary>
+            Last created page - Used when there is no free page inside file
+            </summary>
+        </member>
+        <member name="P:LiteDB.HeaderPage.UserVersion">
+            <summary>
+            Get/Set a user version of database file
+            </summary>
+        </member>
+        <member name="T:LiteDB.DumpDatabase">
+            <summary>
+            A debugger class to show how pages are storaged. Used to debug pages in shell/tests
+            </summary>
+        </member>
+        <member name="T:LiteDB.MimeTypeConverter">
+            <summary>
+            Convert filename to mimetype (http://stackoverflow.com/questions/1029740/get-mime-type-from-filename-extension)
+            </summary>
+        </member>
+        <member name="T:LiteDB.LiteException">
+            <summary>
+            The main exception for LiteDB
+            </summary>
+        </member>
+        <member name="T:LiteDB.StringScanner">
+            <summary>
+            A StringScanner is state machine used in text parsers based on regular expressions
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.#ctor(System.String)">
+            <summary>
+            Initialize scanner with a string to be parsed
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Reset">
+            <summary>
+            Reset cursor position
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Seek(System.Int32)">
+            <summary>
+            Skip cursor position in string source
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Scan(System.String)">
+            <summary>
+            Scan in current cursor position for this patterns. If found, returns string and run with cursor
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Scan(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Scan in current cursor position for this patterns. If found, returns string and run with cursor
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Scan(System.String,System.Int32)">
+            <summary>
+            Scan pattern and returns group string index 1 based
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Match(System.String)">
+            <summary>
+            Match if pattern is true in current cursor position. Do not change cursor position
+            </summary>
+        </member>
+        <member name="M:LiteDB.StringScanner.Match(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Match if pattern is true in current cursor position. Do not change cursor position
+            </summary>
+        </member>
+        <member name="P:LiteDB.StringScanner.HasTerminated">
+            <summary>
+            Indicate that cursor is EOF
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -40,3 +40,5 @@ C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\D
 C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.g.resources
 C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium_bot_template.Properties.Resources.resources
 C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csproj.GenerateResource.Cache
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.dll
+C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.xml

@@ -33,8 +33,8 @@ namespace Selenium_bot_template
 
         private void StatButton_Click(object sender, RoutedEventArgs e)
         {
-            botThread = new Thread(bot.BotActions);
-            botThread.Start();
+            DB.LoadSettings();
+
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
