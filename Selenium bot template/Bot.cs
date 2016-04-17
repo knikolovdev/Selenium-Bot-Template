@@ -60,6 +60,7 @@ namespace Selenium_bot_template
             wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(12));
             JS = Driver as IJavaScriptExecutor;
             return Driver;
+            //
         }
 
         public void Log(string text)
