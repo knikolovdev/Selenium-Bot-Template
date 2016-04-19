@@ -1,4 +1,4 @@
-# Selenium-Bot-Template  [![Join the chat at https://gitter.im/knikolov1t/Selenium-Bot-Template](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/knikolov1t/Selenium-Bot-Template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Selenium-Bot-Template  [![Join the chat at https://gitter.im/knikolov1t/Selenium-Bot-Template](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/knikolov1t/Selenium-Bot-Template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![PayPayl](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DN5L89AKVQV88 "Donate once-off to this project using Paypal")
 http://bit.ly/1S8AXqv
 ## Features
 1. Styled WPF User Interface ( dark themed )
