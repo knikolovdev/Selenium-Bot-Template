@@ -7,6 +7,7 @@ Template for writing Selenium bots in C# with many basic necessities prepared. I
       * Menu panel on top with working exit button
       * LogBox - Panel for logging bot actions/status.
       * Status bar on the bottom
+      * Separate window for settings
 2. My Selenium helper and utility functions included
       * Includes many functions for easy element selection and element waiting
       * Functions include error handling - error in message box + sound, so bot user will understand whats the problem.
