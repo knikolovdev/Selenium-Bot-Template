@@ -24,6 +24,8 @@
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
                 <MenuItem Header="File">
+                    <MenuItem x:Name="SettingsBtn" Header="Settings" Click="SettingsBtn_Click"/>
+                    <Separator/>
                     <MenuItem x:Name="ExitBtn" Header="Exit" Click="ExitBtn_Click"/>
                 </MenuItem>
                 <MenuItem x:Name="HelpBtn" Header="Help" IsEnabled="True" HorizontalAlignment="Right"/>

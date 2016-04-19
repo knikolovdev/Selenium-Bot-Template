@@ -41,5 +41,11 @@ namespace Selenium_bot_template
         {
             Application.Current.Shutdown();
         }
+
+        private void SettingsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.Show();
+        }
     }
 }

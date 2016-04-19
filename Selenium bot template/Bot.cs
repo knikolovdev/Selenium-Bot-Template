@@ -19,7 +19,7 @@ namespace Selenium_bot_template
         public IWebDriver EnterWithChrome()
         {
             Log("Starting Chrome.");
-            Driver = new FirefoxDriver();
+            Driver = new ChromeDriver();
             wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(12));
             JS = Driver as IJavaScriptExecutor;
             return Driver;
