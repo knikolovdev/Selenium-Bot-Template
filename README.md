@@ -4,7 +4,7 @@ http://bit.ly/1S8AXqv
 ## Features
 1. Styled WPF User Interface ( dark themed )
       * Also there is an image I use for background
-      * Menu panel on top with working exit button
+      * Menu panel on top with working exit,settings,about,help buttons
       * LogBox - Panel for logging bot actions/status.
       * Status bar on the bottom
       * Separate window for settings
