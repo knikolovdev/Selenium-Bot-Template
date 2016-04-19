@@ -14,11 +14,18 @@
         <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="207,276,0,0" VerticalAlignment="Top" Width="75" Click="CloseButton_Click"/>
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="271" VerticalAlignment="Top" Width="272" Margin="10,0,0,0" Foreground="#FF8B8B8B" BorderBrush="#FF292828" Background="#FF1F1C1C" Opacity="0.7">
             <TabItem Header="Browser" Background="#FF333333">
-                <Grid Background="#FF1B1B1B"/>
+                <Grid Background="#FF1B1B1B">
+                    <RadioButton x:Name="radioButton" Content="RadioButton" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Proxy">
-                <Grid Background="#FF1B1B1B"/>
+                <Grid Background="#FF1B1B1B">
+                    <CheckBox x:Name="ProxyCheck" Content="Enable proxy" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label" Content="Proxy address" Margin="10,30,174,188"/>
+                    <TextBox x:Name="ProxyBox" HorizontalAlignment="Left" Height="23" Margin="93,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+                </Grid>
             </TabItem>
         </TabControl>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
