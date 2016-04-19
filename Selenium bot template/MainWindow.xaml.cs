@@ -47,5 +47,17 @@ namespace Selenium_bot_template
             SettingsWindow settingsWindow = new SettingsWindow();
             settingsWindow.Show();
         }
+
+        private void HelpBtn_Click(object sender, RoutedEventArgs e)
+        {
+            HelpWindow helpWindow = new HelpWindow();
+            helpWindow.Show();
+        }
+
+        private void AboutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AboutWindow aboutWindow = new AboutWindow();
+            aboutWindow.Show();
+        }
     }
 }

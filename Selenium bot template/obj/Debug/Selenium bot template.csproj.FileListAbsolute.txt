@@ -68,3 +68,7 @@ D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium_bo
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csproj.GenerateResource.Cache
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\SettingsWindow.g.cs
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\SettingsWindow.baml
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\HelpWindow.g.cs
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\HelpWindow.baml
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\AboutWindow.g.cs
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\AboutWindow.baml

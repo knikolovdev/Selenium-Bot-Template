@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\App.xaml
-3-244710416
+5-2082643428
 
-16-1088746639
+18-235857743
 172114375436
-MainWindow.xaml;SettingsWindow.xaml;Themes\Styles.xaml;
+AboutWindow.xaml;HelpWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;Themes\Styles.xaml;
 
-False
+True
 
