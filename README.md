@@ -1,4 +1,5 @@
 # Selenium-Bot-Template  [![Join the chat at https://gitter.im/knikolov1t/Selenium-Bot-Template](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/knikolov1t/Selenium-Bot-Template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Github All Releases](https://img.shields.io/github/downloads/knikolov1t/Selenium-Bot-Template/total.svg?maxAge=2592000)]()
 Template for writing Selenium bots in C# with many basic necessities prepared. Includes WPF UI. 
 http://bit.ly/1S8AXqv
 ## Features
