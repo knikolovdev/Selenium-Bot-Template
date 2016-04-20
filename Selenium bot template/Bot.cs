@@ -71,6 +71,12 @@ namespace Selenium_bot_template
             }));
         }
 
+        public void TestProxy()
+        {
+            EnterWithFirefox();
+            GoTo("http://myexternalip.com");
+        }
+
         public void BotActions()
         {
             EnterWithFirefox();
