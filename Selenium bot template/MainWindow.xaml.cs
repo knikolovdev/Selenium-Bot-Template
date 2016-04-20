@@ -33,7 +33,7 @@ namespace Selenium_bot_template
 
         private void StatButton_Click(object sender, RoutedEventArgs e)
         {
-            DB.LoadSettings();
+            //DB.LoadSettings();
 
         }
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Selenium_bot_template"
         mc:Ignorable="d"
         Title="Bot" Height="349" Width="525"
-        Style ="{StaticResource {x:Type Window}}">
+        Style ="{StaticResource {x:Type Window}}" Icon="Images/vader.ico">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/darkepic.jpg"/>

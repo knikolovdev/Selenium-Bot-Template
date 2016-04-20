@@ -43,9 +43,6 @@ C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\obj\D
 C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.dll
 C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.xml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.exe.config
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.exe
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.pdb
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\BotData.db
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.exe
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.pdb
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.dll
@@ -54,21 +51,23 @@ D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.S
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.xml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.xml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.Support.xml
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csprojResolveAssemblyReference.cache
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\AboutWindow.g.cs
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\HelpWindow.g.cs
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\MainWindow.g.cs
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\SettingsWindow.g.cs
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\App.g.cs
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template_MarkupCompile.cache
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template_MarkupCompile.lref
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\App.baml
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\AboutWindow.baml
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\HelpWindow.baml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\MainWindow.baml
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\SettingsWindow.baml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Themes\Styles.baml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.g.resources
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium_bot_template.Properties.Resources.resources
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csproj.GenerateResource.Cache
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\SettingsWindow.g.cs
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\SettingsWindow.baml
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\HelpWindow.g.cs
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\HelpWindow.baml
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\AboutWindow.g.cs
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\AboutWindow.baml
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csprojResolveAssemblyReference.cache
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.exe
+D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.pdb
