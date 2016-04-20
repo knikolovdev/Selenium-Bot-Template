@@ -1,10 +1,9 @@
-# Selenium-Bot-Template
-Template for writing Selenium bots in C# with many basic necessities prepared. Includes WPF UI.
-
+# Selenium-Bot-Template  [![Join the chat at https://gitter.im/knikolov1t/Selenium-Bot-Template](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/knikolov1t/Selenium-Bot-Template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![PayPayl](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8ZNZLURBKNVN "Donate once-off to this project using Paypal")
+http://bit.ly/1S8AXqv
 ## Features
 1. Styled WPF User Interface ( dark themed )
       * Also there is an image I use for background
-      * Menu panel on top with working exit button
+      * Menu panel on top with working exit,settings,about,help buttons
       * LogBox - Panel for logging bot actions/status.
       * Status bar on the bottom
       * Separate window for settings
@@ -24,6 +23,3 @@ Template for writing Selenium bots in C# with many basic necessities prepared. I
   3. When creating new project this will appear as template with the name you gave it.
   4. Open the nuget manager, nugget will ask to install your missing packages.
 
-
-### Support
-<a href='https://pledgie.com/campaigns/31469'><img alt='Click here to lend your support to: Selenium C# Utilities and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31469.png?skin_name=chrome' border='0' ></a>
