@@ -8,5 +8,8 @@
     <Setting Name="proxy" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="browser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Chrome</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

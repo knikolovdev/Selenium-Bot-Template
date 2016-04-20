@@ -46,5 +46,17 @@ namespace Selenium_bot_template.Properties {
                 this["proxy"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Chrome")]
+        public string browser {
+            get {
+                return ((string)(this["browser"]));
+            }
+            set {
+                this["browser"] = value;
+            }
+        }
     }
 }

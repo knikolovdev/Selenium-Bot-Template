@@ -15,7 +15,10 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="271" VerticalAlignment="Top" Width="272" Margin="10,0,0,0" Foreground="#FF8B8B8B" BorderBrush="#FF292828" Background="#FF1F1C1C" Opacity="0.7">
             <TabItem Header="Browser" Background="#FF333333">
                 <Grid Background="#FF1B1B1B">
-                    <RadioButton x:Name="radioButton" Content="RadioButton" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <StackPanel>
+                        <RadioButton x:Name="radioButton" Content="Chrome" GroupName="Browsers" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="radioButton2" Content="Firefox" GroupName="Browsers" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    </StackPanel>
                 </Grid>
             </TabItem>
             <TabItem Header="Proxy">
