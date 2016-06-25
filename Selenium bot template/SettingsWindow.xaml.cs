@@ -1,5 +1,4 @@
-﻿using LiteDB;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +37,6 @@ namespace Selenium_bot_template
             Properties.Settings.Default.Save();
             MessageBox.Show("Settings saved.");
         }
-
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();

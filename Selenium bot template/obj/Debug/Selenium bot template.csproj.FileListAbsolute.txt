@@ -45,10 +45,8 @@ C:\Users\Konstantin\Desktop\C#\Selenium-Bot-Template\Selenium bot template\bin\D
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.exe.config
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.exe
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\Selenium bot template.pdb
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.dll
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.dll
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.Support.dll
-D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\LiteDB.xml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.xml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\bin\Debug\WebDriver.Support.xml
 D:\Projects\C#\Selenium-Bot-Template\Selenium bot template\obj\Debug\Selenium bot template.csprojResolveAssemblyReference.cache
