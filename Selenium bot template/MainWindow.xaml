@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Selenium_bot_template"
         mc:Ignorable="d"
-        Title="Bot" Height="349" Width="525"
-        Style ="{StaticResource {x:Type Window}}" Icon="Images/vader.ico">
+        Title="Bot" Height="311.5" Width="513"
+        Style ="{StaticResource {x:Type Window}}" Icon="Images/vader.ico"
+        WindowStyle="None"        
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/darkepic.jpg"/>
